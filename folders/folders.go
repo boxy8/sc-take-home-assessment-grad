@@ -12,6 +12,8 @@ import (
 // - removing the unused variables (which actually cause compilation errors)
 // - removing the unnecessary dereferencing and referencing of the folders
 // - using better variable names
+
+// - also could rename id to be ID or Id everywhere
 func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
 	folders, err := FetchAllFoldersByOrgID(req.OrgID)
 	if err != nil {
