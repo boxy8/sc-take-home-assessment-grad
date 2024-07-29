@@ -9,3 +9,13 @@ type FetchFolderRequest struct {
 type FetchFolderResponse struct {
 	Folders []*Folder
 }
+
+type FetchFolderRequestPaginated struct {
+	OrgID uuid.UUID
+	Page int
+	PageSize int
+}
+
+type FetchFolderResponsePaginated struct {
+	Folders []*Folder
+}
