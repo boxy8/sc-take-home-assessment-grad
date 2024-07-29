@@ -4,6 +4,8 @@ import (
 	"github.com/gofrs/uuid"
 )
 
+// GetAllFolders takes in a FetchFolderRequest which contains an organization ID.
+// It returns an array of folder references from the organization ID.
 func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
 	var (
 		err error
@@ -24,6 +26,8 @@ func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
 	return ffr, nil
 }
 
+// FetchAllFoldersByOrgID fetches folders by the organization ID
+// It fetches all folders and returns those that match the input organization ID.
 func FetchAllFoldersByOrgID(orgID uuid.UUID) ([]*Folder, error) {
 	folders := GetSampleData()
 
