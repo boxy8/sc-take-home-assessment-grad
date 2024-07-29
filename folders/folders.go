@@ -6,6 +6,12 @@ import (
 
 // GetAllFolders takes in a FetchFolderRequest which contains an organization ID.
 // It returns an array of folder references from the organization ID.
+
+// The function can improved by:
+// - handling the nil error
+// - removing the unused variables (which actually cause compilation errors)
+// - removing the unnecessary dereferencing and referencing of the folders
+// - using better variable names
 func GetAllFolders(req *FetchFolderRequest) (*FetchFolderResponse, error) {
 	var (
 		err error
